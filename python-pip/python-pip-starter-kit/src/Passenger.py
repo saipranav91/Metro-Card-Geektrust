@@ -59,15 +59,18 @@ class SeniorCitizen(Passenger):
 
 class PassengerFactory:
     def __init__(self):
-        self.passenger_types = {
+        self._passenger_types = {
             "ADULT": AdultPassenger,
             "KID": KidPassenger,
             "SENIOR_CITIZEN": SeniorCitizen,
         }
+    def addPassengerTypes(self,key,value):
+        self._passenger_types[key]=value
+        
     
     def createPassenger(self,id,balance,passenger_type):
-        if passenger_type in self.passenger_types:
-            return self.passenger_types[passenger_type](id,balance)
+        if passenger_type in self._passenger_types:
+            return self._passenger_types[passenger_type](id,balance)
         else:
             raise Exception(f"{passenger_type} not found")
         
