@@ -59,7 +59,7 @@ class SeniorCitizen(Passenger):
 
 class PassengerFactory:
     def __init__(self):
-        self._passenger_types = {
+        self._passenger_types = {#storing in dict makes it more flexible for adding other types
             "ADULT": AdultPassenger,
             "KID": KidPassenger,
             "SENIOR_CITIZEN": SeniorCitizen,
