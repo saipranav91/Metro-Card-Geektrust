@@ -19,8 +19,8 @@ def main():
 
 
 def validate_args(args):
-    min=2
-    if len(args)!=min:
+    minimum=2
+    if len(args)!=minimum:
         raise Exception("File Path does not exist")
     return args[1]           
 

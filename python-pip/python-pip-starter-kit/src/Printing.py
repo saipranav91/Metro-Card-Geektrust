@@ -1,4 +1,5 @@
 class Printing:
+    @staticmethod    
     def arrangePassengerSummary(self,trip_manager):
         sorted_central = dict(sorted(trip_manager.getCentralSummary().items(), key=lambda x: (-x[1], x[0])))
         sorted_airport = dict(sorted(trip_manager.getAirportSummary().items(), key=lambda x: (-x[1], x[0])))

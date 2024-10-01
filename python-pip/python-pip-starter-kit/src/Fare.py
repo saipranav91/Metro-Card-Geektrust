@@ -9,7 +9,7 @@ class Fare:
         return (total_fare,discount)
         
         
-        
+    @staticmethod   
     def serviceTax(self,insufficient):
         tax=0.02
         return math.ceil(tax*insufficient)
